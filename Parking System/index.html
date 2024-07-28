@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Responsive Parking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Parking System</h1>
+        <div class="controls">
+            <!-- Button to add more spots -->
+            <button id="addSpot">Add Parking Spot</button>
+            <!-- Button to remove the last spot -->
+            <button id="removeLastSpot">Remove Last Spot</button>
+            <!-- Display total and available parking spots -->
+            <p>Total Spots: <span id="totalSpots">0</span></p>
+            <p>Available Spots: <span id="availableSpots">0</span></p>
+            <!-- Input to set new capacity -->
+            <input type="number" id="capacityInput" placeholder="Enter new capacity" min="1" max="1000">
+            <!-- Button to update the capacity -->
+            <button id="setCapacity">Set Capacity</button>
+        </div>
+        <!-- Parking lot grid -->
+        <div class="parking-lot" id="parkingLot"></div>
+    </div>
+
+    <!-- Modal for parking spot details -->
+    <div class="modal" id="detailsModal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h2>Parking Spot Details</h2>
+            <div class="details">
+                <p>Spot Number: <span id="spotNumber"></span></p>
+                <p>Status: <span id="spotStatus"></span></p>
+                <p>Vehicle Number: <input type="text" id="vehicleNumber" placeholder="Enter vehicle number"></p>
+                <p>Entry Time: <span id="entryTime"></span></p>
+                <button id="updateSpot">Update</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
